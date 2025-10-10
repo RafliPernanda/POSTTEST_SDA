@@ -30,12 +30,11 @@ Node* insert(Node* root, int val) {
 }
 
 int countNodes(Node* root) {
-    // jika tree atau subtree kosong, tidak ada node untuk dihitung.
+    // kalau tree kosong, return 0
     if (root == nullptr) {
         return 0;
     }
-    // Hitung 1 untuk node saat ini, lalu tambahkan dengan
-    // jumlah node dari subtree kiri dan subtree kanan secara rekursif.
+    // Hitung node secara rekursif dari kiri dan kanan, tambahkan 1 untuk node saat ini
     return 1 + countNodes(root->left) + countNodes(root->right);
     // -----------------------------
 }
